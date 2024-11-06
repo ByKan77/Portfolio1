@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation du Jeu</title>
+    <link rel="stylesheet" href="style_projet2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Respire Stat</h1>
+        </header>
+        <main>
+            <section class="game-info">
+                <h2>À propos du Projet</h2>
+                <p>Datactivist est une société coopérative et participative qui se donne pour mission d’ouvrir les données et de les rendre utiles et utilisées.</p>
+                    <p>StatPerf est une ESN spécialisée dans le traitement des données statistiques et la visualisation de données.</p>
+                    <p>Nous sommes développeur dans leur équipe logicielle.</p>
+                    <p>Respire est une association nationale pour l’amélioration et la préservation de la qualité de l’air.</p>
+                    <p>Respire a fait appel à Datactivist pour collecter les données sur la pollution aérienne aux abords des écoles et crèches d’Île-de-France afin d'alerter sur les niveaux d'expositions des populations fragiles à la pollution aérienne.</p>
+                    Respire fait appel StatPerf pour concevoir et réaliser une application lourde nommée RespireStat permettant de visualiser les données collectées par Datactivist.
+                    </p>
+            </section>
+            <section class="features">
+                <h2>Le but</h2>
+                <ul>
+                    <p>Nous sommes développeur salarié au sein de StatPerf, plus spécifiquement dans le département développement logiciel.</p>
+                    <p>Il nous a été confié la mission d’améliorer ce logiciel qui est incomplet.</p>
+                </ul>
+            </section>
+            <section>
+                <div class="button-container">
+                    <button id="respire">Télécharger Le Projet RespireStat</button>
+                </div>
+            </section>
+        </main>
+        <div class="button-container">
+            <button id="back">Retourner sur le portfolio</button>
+        </div>
+    
+        <footer>
+            <p>&copy; 2024 Un Projet Incroyable. Tous droits réservés.</p>
+        </footer>
+    </div>
+    
+    <script>
+        
+            document.getElementById("back").addEventListener("click", function() {
+            document.location.href = '../../index.html';
+        });
+
+        document.getElementById("respire").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = 'projet_respire/RespireStat.zip';
+            link.download = 'RespireStat.zip';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>

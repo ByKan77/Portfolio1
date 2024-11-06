@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sofiane Ouadah Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" type="image/png" href="icon_picture/pirate.png">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="logo">
+                    <svg    width="210mm"
+                            height="297mm"
+                            viewBox="0 0 100 100"
+                            version="1.1"
+                            id="svg5"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:svg="http://www.w3.org/2000/svg">
+                            <defs>
+                                <style>
+                                .stroke {
+                                    fill: none;
+                                    stroke:  #2F4F4F;
+                                    stroke-width: 4;
+                                }
+                                </style>
+                            </defs>
+                            
+                            <!-- Courbes de Bézier pour simuler la forme -->
+                            <path class="stroke"
+                                d="M 50,15 
+                                    C 70,25 80,45 90,35
+                                    C 80,70 70,75 50,95
+                                    C 30,75 20,70 10,75
+                                    C 20,45 30,25 50,15
+                                "/>
+
+                            <!-- Lignes pour ajouter les traits verticaux -->
+                            <line class="stroke" x1="50" y1="15" x2="50" y2="95"/>
+                            <line class="stroke" x1="90" y1="35" x2="50" y2="55"/>
+                            <line class="stroke" x1="10" y1="35" x2="50" y2="55"/>
+                            <line class="stroke" x1="10" y1="75" x2="50" y2="55"/>
+                            <line class="stroke" x1="90" y1="75" x2="50" y2="55"/>
+                            </svg>             
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#formation">Formation</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="Veille _tech/veille.html">Veille</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <section id="formation" class="projects">
+            <h2 class="title">Formation BTS SIO</h2>
+            <div class="three-columns-grid">
+                <div>
+                    <h2>Option SISR</h2>
+                </br>
+                    <div>
+                        - L'option SISR est axée sur la gestion des infrastructures réseaux et systèmes.</br>
+                    </br>- Les étudiants qui choisissent cette option se préparent à des métiers liés à l'administration des réseaux et des systèmes d'information.
+                    </div>
+                </div>
+                <div>
+                    <h2>Cybersécurité</h2>
+                </br>
+                    <div>
+                            - Dans l'option SISR, la cybersécurité est principalement axée sur la protection des infrastructures, des réseaux et des systèmes.</br> 
+                    </br>   - Dans l'option SLAM, la cybersécurité est principalement axée sur la sécurité des applications et des données. 
+                    </div>
+                </div>
+                <div>
+                    <h2>Option SLAM</h2>
+                </br>
+                    <div>
+                        - L'option SLAM du BTS Services Informatiques aux Organisations (SIO) est axée sur le développement d'applications et de solutions logicielles.</br>
+                    </br>- Les étudiants qui choisissent cette option se préparent à des métiers liés à la conception, au développement, et à la maintenance des logiciels.
+                    </div>
+                </div>
+            </div>  
+            <div class="button-container">
+                <button class="download-button" id="CV">Télécharger mon CV</button>
+                <button class="download-button" id="Synthèse">Tableau de Synthèse</button>
+            </div>          
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="title">Skills</h2>
+            <div class="logos">
+                <div class="logos-slide">
+                    <img src="icon_picture/java.png" alt="Java">
+                    <img src="icon_picture/js.png" alt="JavaScript">
+                    <img src="icon_picture/mysql.png" alt="MySQL">
+                    <img src="icon_picture/php.png" alt="PHP">
+                    <img src="icon_picture/css-3.png" alt="CSS">
+                    <img src="icon_picture/HTML.png" alt="HTML">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="projects" class="projects">
+            <h2 class="title">Mes Projets</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <a href="projet/projet1/projet1.html">
+                        <img src="icon_picture/4_10.jpg" alt="Project 1">
+                        <span>Jeu Mathématiques</span>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="projet/projet2/projet2.html">
+                        <img src="projects_picture/TableauStatProjet.png" alt="Project 2">
+                        <span>Projet RespireStat</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="title">Contact</h2>
+            <a href="https://github.com/ByKan77" class="github-link" target="_blank">
+                <i class="fab fa-github"></i> GitHub Profile
+            </a>
+            <a href="https://www.linkedin.com/in/sofiane-ouadah-4a835b243/" class="github-link" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+        <script>
+            document.getElementById("Synthèse").addEventListener("click", function() {
+            const pdfUrl = 'projects_picture/Tableau_Synthèse.pdf';
+            
+            window.open(pdfUrl, '_blank');
+
+        
+            const link = document.createElement("a");
+            link.href = pdfUrl;
+            link.download = 'Tableau_Synthèse.pdf';
+
+            
+            link.click();
+        });
+
+
+
+        document.getElementById("CV").addEventListener("click", function() {
+            const pdfUrl = 'projects_picture/CV_Ouadah_Sofiane_Alternance.pdf';
+            
+            window.open(pdfUrl, '_blank');
+
+        
+            const link = document.createElement("a");
+            link.href = pdfUrl;
+            link.download = 'CV_Ouadah_Sofiane_Alternance.pdf';
+
+            
+            link.click();
+        });
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
