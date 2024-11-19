@@ -59,41 +59,72 @@
         </header>
 
         <section id="formation" class="projects">
-            <h2 class="title">Formation BTS SIO</h2>
-            <div class="three-columns-grid">
-                <div>
-                    <h2>Option SISR</h2>
-                </br>
-                    <div>
-                        - L'option SISR est axée sur la gestion des infrastructures réseaux et systèmes.</br>
-                    </br>- Les étudiants qui choisissent cette option se préparent à des métiers liés à l'administration des réseaux et des systèmes d'information.
+            <h2 class="title">Présentation</h2>
+            <hr class="sepa_lien">
+            <div class="row">
+                <!-- Colonne gauche : Qui suis-je -->
+                <div class="column fixed">
+                    <h2 class="subtitle">Qui suis-je ?</h2>
+                    <p class="color_h">
+                        Je m'appelle Sofiane Ouadah, j'ai 22 ans, et je suis passionné d'informatique depuis l'enfance.</br>
+                        J'effectue un BTS SIO, ce BTS permet en deux ans d'être formé en administrateur réseaux en option SISR ou, en tant que développeur web en option SLAM.
+                    </p>
+                    <div class="button-container">
+                        <div class="button-with-image">
+                            <button class="download-button" id="CV">Télécharger mon CV</button>
+                            <a href="#"><img src="icon_picture/eye.png" alt="CV Icon"  onclick="openPDF('projects_picture/CV_Ouadah_Sofiane_Alternance.pdf')"></a>
+                        </div>
+                        <div class="button-with-image">
+                            <button class="download-button" id="Synthèse">Tableau de Synthèse</button>
+                            <a href="#"><img src="icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('projects_picture/Tableau_Synthèse.pdf')"></a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h2>Cybersécurité</h2>
-                </br>
-                    <div>
-                            - Dans l'option SISR, la cybersécurité est principalement axée sur la protection des infrastructures, des réseaux et des systèmes.</br> 
-                    </br>   - Dans l'option SLAM, la cybersécurité est principalement axée sur la sécurité des applications et des données. 
-                    </div>
+                
+                <!-- Colonne droite : Parcours -->
+                <div class="column flexible">
+                    <h2 class="subtitle">Parcours</h2>
+                    <section id="parcours">        
+                        <h3 class="color_h">BTS SIO Option SLAM - 2023/2025</h3>
+                        <a href="#"><p class="btn-toggle" onclick="toggleDetails(this)">+ Afficher les détails</p></a>
+                        <div class="details" style="display: none;">
+                            <ul>
+                                <li><strong>Durée :</strong> 2 ans (2023-2025)</li>
+                                <li><strong>Lieu :</strong> Ecole IPSSI, Marne-La-Vallée</li>
+                                <li><strong>Objectifs :</strong> Formation axée sur les systèmes informatiques, développement et programmation.</li>
+                                <li><strong>Modules principaux :</strong> Développement web, gestion de bases de données, sécurité des réseaux...</li>
+                            </ul>
+                        </div>
+                        <hr class="separator">
+                        <h3 class="color_h">Intérimaire - 2022</h3>
+                        <a href="#"><p class="btn-toggle" onclick="toggleDetails(this)">+ Afficher les détails</p></a>
+                        <div class="details" style="display: none;">
+                            <ul>
+                                <li><strong>Durée :</strong> 1 an (2022-2023)</li>
+                                <li><strong>Lieu :</strong> Makita, Bussy-Saint-George</li>
+                                <li><strong>Objectifs :</strong> Formation axée sur les systèmes informatiques, développement et programmation.</li>
+                                <li><strong>Modules principaux :</strong> Développement web, gestion de bases de données, sécurité des réseaux...</li>
+                            </ul>
+                        </div>
+                        <hr class="separator">
+                        <h3 class="color_h">Bac Général - 2021</h3>
+                        <a href="#"><p class="btn-toggle" onclick="toggleDetails(this)">+ Afficher les détails</p></a>
+                        <div class="details" style="display: none;">
+                            <ul>
+                                <li><strong>Durée :</strong> 1 an (2021-2022)</li>
+                                <li><strong>Lieu :</strong> Jean Moulin, Torcy</li>
+                                <li><strong>Objectifs :</strong> Bac Général, avec comme spécialité Mathématiques et SVT</li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
-                <div>
-                    <h2>Option SLAM</h2>
-                </br>
-                    <div>
-                        - L'option SLAM du BTS Services Informatiques aux Organisations (SIO) est axée sur le développement d'applications et de solutions logicielles.</br>
-                    </br>- Les étudiants qui choisissent cette option se préparent à des métiers liés à la conception, au développement, et à la maintenance des logiciels.
-                    </div>
-                </div>
-            </div>  
-            <div class="button-container">
-                <button class="download-button" id="CV">Télécharger mon CV</button>
-                <button class="download-button" id="Synthèse">Tableau de Synthèse</button>
-            </div>          
+            </div>
         </section>
+        
 
         <section id="skills" class="skills">
             <h2 class="title">Skills</h2>
+            <hr class="sepa_lien">
             <div class="logos">
                 <div class="logos-slide">
                     <img src="icon_picture/java.png" alt="Java">
@@ -109,6 +140,7 @@
 
         <section id="projects" class="projects">
             <h2 class="title">Mes Projets</h2>
+            <hr class="sepa_lien">
             <div class="project-grid">
                 <div class="project">
                     <a href="projet/projet1/projet1.html">
@@ -127,6 +159,7 @@
 
         <section id="contact" class="contact">
             <h2 class="title">Contact</h2>
+            <hr class="sepa_lien">
             <a href="https://github.com/ByKan77" class="github-link" target="_blank">
                 <i class="fab fa-github"></i> GitHub Profile
             </a>
@@ -136,37 +169,6 @@
         </section>
 
         <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-        <script>
-            document.getElementById("Synthèse").addEventListener("click", function() {
-            const pdfUrl = 'projects_picture/Tableau_Synthèse.pdf';
-            
-            window.open(pdfUrl, '_blank');
-
-        
-            const link = document.createElement("a");
-            link.href = pdfUrl;
-            link.download = 'Tableau_Synthèse.pdf';
-
-            
-            link.click();
-        });
-
-
-
-        document.getElementById("CV").addEventListener("click", function() {
-            const pdfUrl = 'projects_picture/CV_Ouadah_Sofiane_Alternance.pdf';
-            
-            window.open(pdfUrl, '_blank');
-
-        
-            const link = document.createElement("a");
-            link.href = pdfUrl;
-            link.download = 'CV_Ouadah_Sofiane_Alternance.pdf';
-
-            
-            link.click();
-        });
-        </script>
         <script src="script.js"></script>
     </body>
 </html>

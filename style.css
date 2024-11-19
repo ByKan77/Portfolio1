@@ -298,12 +298,6 @@ nav {
     padding:1rem;
 }
 
-.button-container {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
-    
-}
 .download-button {
     background-color: #007BFF;
     color: white;
@@ -316,4 +310,157 @@ nav {
 }
 .download-button:hover {
     background-color: #0056b3;
+}
+
+.separator{ 
+  
+    border:         none;
+    border-left:    1px solid hsla(200, 10%, 50%,100);
+    height:         50px;
+    width:          1px;       
+    margin-left: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sepa_lien{
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#list-experiences li {
+    margin-bottom: 20px;  /* Espacement entre chaque expérience */
+    margin-top: 20px;
+}
+#experiences{
+    margin-top: 50px;
+}
+
+a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Hérite de la couleur du texte parent */
+    cursor: pointer; /* Affiche le curseur en mode clic */
+}
+
+a:hover .btn-toggle {
+    color: #00BFFF; /* Change la couleur du texte au survol */
+    transition: color 0.3s ease; /* Ajoute une transition pour un effet fluide */
+}
+
+.btn-toggle {
+    font-size: 16px; /* Ajustez selon votre besoin */
+    font-weight: bold; /* Met le texte en gras */
+    transition: transform 0.3s ease; /* Effet fluide */
+}
+
+.btn-toggle:hover {
+    transform: scale(1.1); /* Augmente légèrement la taille */
+}
+
+ul {
+    list-style-type: none; /* Supprime les puces ou tirets */
+    padding: 0; /* Retire les marges internes */
+    margin: 0; /* Retire les marges externes */
+}
+
+li {
+    padding-left: 10px; /* Ajoute un espacement pour un effet visuel équilibré */
+}
+.projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les colonnes */
+}
+
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.details{
+    margin-top: 20px;
+}
+.projects .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les colonnes */
+}
+
+.projects .column {
+    flex: 1; /* Les colonnes prennent un espace égal */
+    min-width: 300px; /* Largeur minimale pour chaque colonne */
+    padding: 20px; /* Espacement interne pour le contenu */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    background-color: #fff; /* Fond blanc pour la card */
+    border: 2px solid #ddd; /* Bordure grise */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre pour donner un effet de profondeur */
+    transition: transform 0.2s, box-shadow 0.2s; /* Transition pour effet au survol */
+}
+
+/* Effet au survol */
+.projects .column:hover {
+    transform: translateY(-5px); /* Légère élévation */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Titre des sections dans les cards */
+.projects .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+    color: var(--accent-color); /* Couleur du texte */
+    border-bottom: 2px solid #ddd; /* Ligne sous le titre */
+    padding-bottom: 5px; /* Espacement avec le texte */
+}
+
+/* Espacement pour les paragraphes */
+.projects .column p,
+.projects .column ul {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.button-container {
+    justify-content: space-evenly;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px; /* Espacement entre chaque groupe (image + bouton) */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Aligne les images et boutons verticalement */
+}
+
+.button-with-image {
+    display: flex;
+    align-items: center; /* Aligne l'image et le bouton verticalement */
+    gap: 10px; /* Espacement entre l'image et le bouton */
+}
+
+.download-button {
+    padding: 10px 20px; /* Espacement interne */
+    border: 2px solid #007BFF; /* Bordure bleue */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: #fff; /* Fond blanc */
+    color: #007BFF; /* Couleur du texte */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #007BFF; /* Fond bleu au survol */
+    color: #fff; /* Texte blanc au survol */
+}
+
+.button-with-image img {
+    width: 30px; /* Largeur de l'image */
+    height: 30px; /* Hauteur de l'image */
+    object-fit: contain; /* Maintient les proportions de l'image */
+}
+
+.color_h{
+    color: #000080;
 }
