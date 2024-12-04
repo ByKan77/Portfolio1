@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
         introSection.classList.add("fade-out");
         setTimeout(() => {
             introSection.style.display = "none";
-        }, 1000);
+        }, 500);
     });
 });
 

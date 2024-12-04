@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f8ff;
+    background-color: #0b3d91; /* Bleu foncé */
     color: #333;
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ section {
 }
 
 h2 {
-    color: #1e90ff;
+    color: #e6f7ff;
 }
 
 ul {
@@ -43,7 +43,7 @@ ul li {
 }
 
 footer {
-    background-color: #1e90ff;
+background-color: #0b3d91; /* Bleu foncé */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -80,4 +80,7 @@ button {
 
 button:hover {
     background-color: #1c86ee;
+}
+p{
+    color: #fff;
 }
