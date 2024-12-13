@@ -48,3 +48,36 @@ document.getElementById("CV").addEventListener("click", function() {
 function openPDF(pdfFile) {
     window.open(pdfFile, '_blank');
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const aboutMeButton = document.getElementById('aboutMeButton');
+    const aboutMeContent = document.getElementById('aboutMeContent');
+
+    aboutMeButton.addEventListener('click', function () {
+        if (aboutMeContent.classList.contains('hidden')) {
+            aboutMeContent.classList.remove('hidden');
+            aboutMeContent.classList.add('visible');
+        } else {
+            aboutMeContent.classList.remove('visible');
+            aboutMeContent.classList.add('hidden');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.btn-toggle, .about-me-button');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const details = this.nextElementSibling;
+            if (details.style.display === 'none' || !details.style.display) {
+                details.style.display = 'block';
+                this.textContent = this.classList.contains('btn-toggle') ? '- Masquer les détails' : 'Masquer les détails';
+            } else {
+                details.style.display = 'none';
+                this.textContent = this.classList.contains('btn-toggle') ? '+ Afficher les détails' : 'Afficher les détails';
+            }
+        });
+    });
+});

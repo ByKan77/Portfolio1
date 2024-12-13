@@ -71,14 +71,26 @@
                     </p>
                     <div class="button-container">
                         <div class="button-with-image">
-                            <button class="download-button" id="CV">Télécharger mon CV</button>
                             <a href="#"><img src="icon_picture/eye.png" alt="CV Icon"  onclick="openPDF('projects_picture/CV_Ouadah_Sofiane_Alternance.pdf')"></a>
+                            <button class="download-button" id="CV">Télécharger mon CV</button> 
                         </div>
                         <div class="button-with-image">
                             <button class="download-button" id="Synthèse">Tableau de Synthèse</button>
                             <a href="#"><img src="icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('projects_picture/Tableau_Synthèse.pdf')"></a>
                         </div>
                     </div>
+                    <hr class="sepa_lien">
+                    <section id="parcours">
+                        <h3 class="color_h">Mes Projets</h3>
+                        <button class="about-me-button" id="aboutMeButton">À propos de moi</button>
+                        <div class="about-me-content hidden" id="aboutMeContent">
+                            <ul>
+                                <li><strong>Court terme : </strong> Terminer mon BTS avec succès.</li>
+                                <li><strong>Moyen terme : </strong> Intégrer une entreprise en tant que développeur web ou administrateur réseau.</li>
+                                <li><strong>Long terme  :</strong> Créer ma propre entreprise dans le domaine de l'informatique.</li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
                 
                 <!-- Colonne droite : Parcours -->
@@ -86,8 +98,8 @@
                     <h2 class="subtitle">Parcours</h2>
                     <section id="parcours">        
                         <h3 class="color_h">BTS SIO Option SLAM - 2023/2025</h3>
-                        <a href="#"><p class="btn-toggle" onclick="toggleDetails(this)">+ Afficher les détails</p></a>
-                        <div class="details" style="display: none;">
+                        <button class="about-me-button" id="aboutMeButton1">Afficher les détails</button>
+                        <div class="about-me-content hidden" id="aboutMeContent1">
                             <ul>
                                 <li><strong>Durée :</strong> 2 ans (2023-2025)</li>
                                 <li><strong>Lieu :</strong> Ecole IPSSI, Marne-La-Vallée</li>
@@ -97,19 +109,18 @@
                         </div>
                         <hr class="separator">
                         <h3 class="color_h">Intérimaire - 2022</h3>
-                        <a href="#"><p class="btn-toggle" onclick="toggleDetails(this)">+ Afficher les détails</p></a>
-                        <div class="details" style="display: none;">
+                        <button class="about-me-button" id="aboutMeButton1">Afficher les détails</button>
+                        <div class="about-me-content hidden" id="aboutMeContent1">
                             <ul>
                                 <li><strong>Durée :</strong> 1 an (2022-2023)</li>
                                 <li><strong>Lieu :</strong> Makita, Bussy-Saint-George</li>
-                                <li><strong>Objectifs :</strong> Formation axée sur les systèmes informatiques, développement et programmation.</li>
-                                <li><strong>Modules principaux :</strong> Développement web, gestion de bases de données, sécurité des réseaux...</li>
+                                <li><strong>Objectifs :</strong> Support logistique et organisationnel dans un cadre professionnel.</li>
                             </ul>
                         </div>
                         <hr class="separator">
                         <h3 class="color_h">Bac Général - 2021</h3>
-                        <a href="#"><p class="btn-toggle" onclick="toggleDetails(this)">+ Afficher les détails</p></a>
-                        <div class="details" style="display: none;">
+                        <button class="about-me-button" id="aboutMeButton1">Afficher les détails</button>
+                        <div class="about-me-content hidden" id="aboutMeContent1">
                             <ul>
                                 <li><strong>Durée :</strong> 1 an (2021-2022)</li>
                                 <li><strong>Lieu :</strong> Jean Moulin, Torcy</li>
@@ -117,7 +128,7 @@
                             </ul>
                         </div>
                     </section>
-                </div>
+                </div>      
             </div>
         </section>
         
