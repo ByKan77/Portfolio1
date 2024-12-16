@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0b3d91; /* Bleu foncé */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header .back-arrow {
+    position: absolute;      /* Positionnement absolu */
+    left: 10px;              /* Décalage de la flèche vers la gauche */
+    font-size: 50px;         /* Taille de la flèche */
+    text-decoration: none;   /* Enlever le soulignement du lien */
+    color: inherit;          /* Garder la couleur du texte */
+
+}
+
+/* Titre centré */
+header h1 {
+    margin: 0;               /* Enlever les marges par défaut */
+    font-size: 24px;         /* Ajuste la taille du titre si nécessaire */
+    text-align: center;      /* Centrer le texte */
+}
+
+header {
+    display: flex;
+    justify-content: center;  /* Centrer le titre */
+    align-items: center;      /* Aligner verticalement */
+    position: relative;       /* Pour positionner la flèche de manière absolue */
+    height: 60px;             /* Ajuste la hauteur du header si nécessaire */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    padding-bottom: 60px; /* Ajout de padding-bottom pour créer de l'espace au-dessus du footer */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #e6f7ff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e6f7ff;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 5px solid #1e90ff;
+    margin-right: 50%;
+    border-radius: 10px;
+}
+
+
+footer {
+background-color: #0b3d91; /* Bleu foncé */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button-container2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #1e90ff;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1c86ee;
+}
+p{
+    color: #fff;
+}
+#img_g {
+    width: 20px; /* Ajustez la largeur de l'icône */
+    height: 20px; /* Assurez-vous que la hauteur est cohérente */
+    vertical-align: middle; /* Aligne l'image avec le texte */
+    margin-left: 5px; /* Ajoute un espace entre le texte et l'icône */
+}
+
+#img_c {
+    max-width: 50%; /* Limite la largeur des images */
+    height: auto; /* Conserve le ratio d'aspect */
+    border-radius: 5px; /* Optionnel : Ajoute des coins arrondis */
+    margin: 0 auto; /* Centre l'image */
+    display: block; /* Nécessaire pour que le margin auto fonctionne */
+    padding-top: 15px;
+}
+.title_g{
+    text-align: center;
+    padding-top: 25px;
+}

@@ -65,25 +65,31 @@ nav {
 }
 
 .links {
-    width: 40%;
+    width: 40%;  /* Réduit la largeur */
+    margin-left: 0;  /* Enlève l'espace à gauche */
 }
 
+/* Modifier l'alignement des éléments à gauche */
 .links ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;  /* Aligne les éléments à gauche */
+    padding: 0;  /* Évite un éventuel padding par défaut */
+    margin: 0;  /* Évite un éventuel margin par défaut */
 }
 
+/* Espacement entre les éléments */
 .links li {
     list-style-type: none;
+    margin-right: 1em; /* Ajouter de l'espacement si nécessaire */
 }
 
 .links a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;  /* Taille plus petite */
     color: var(--high-contrast-text);
     cursor: pointer;
     position: relative;
-    padding: 0.5em 0.8em;
+    padding: 0.4em 0.6em; /* Moins de padding */
     transition: background-color 0.3s, color 0.3s;
     border-radius: 10px;
     backdrop-filter: blur(5px);
@@ -91,7 +97,7 @@ nav {
 
 .links a:hover {
     background-color: var(--hovered-element);
-    color: var(--accent-color); /* Blue text on hover */
+    color: var(--accent-color);
 }
 
 .intro {
@@ -116,7 +122,7 @@ nav {
     background-color: var(--background-element);
 }
 
-.skills, .projects, .contact {
+.skills, .projects, .contact, .documents{
     padding: 4em 2em;
     text-align: center;
     background-color: var(--background);

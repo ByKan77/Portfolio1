@@ -12,9 +12,32 @@ body {
     padding: 20px;
 }
 
+
+header .back-arrow {
+    position: absolute;      /* Positionnement absolu */
+    left: -50px;              /* Décalage de la flèche vers la gauche */
+    font-size: 50px;         /* Taille de la flèche */
+    text-decoration: none;   /* Enlever le soulignement du lien */
+    color: inherit;          /* Garder la couleur du texte */
+
+}
+
+/* Titre centré */
+header h1 {
+    margin: 0;               /* Enlever les marges par défaut */
+    font-size: 24px;         /* Ajuste la taille du titre si nécessaire */
+    text-align: center;      /* Centrer le texte */
+}
+
 header {
+    display: flex;
+    justify-content: center;  /* Centrer le titre */
+    align-items: center;      /* Aligner verticalement */
+    position: relative;       /* Pour positionner la flèche de manière absolue */
+    height: 60px;             /* Ajuste la hauteur du header si nécessaire */
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
 }
 
 h1 {
@@ -50,16 +73,7 @@ li {
     margin: 5px 0;
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #ffffff33;
-}
 
-footer p {
-    margin: 0;
-    font-size: 0.9em;
-}
 
 body {
     margin: 0;
@@ -74,10 +88,7 @@ body {
     padding: 20px;
 }
 
-header {
-    text-align: center;
-    padding: 20px 0;
-}
+
 
 h1 {
     font-size: 2.5em;

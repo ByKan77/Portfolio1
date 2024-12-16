@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gantt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
+        <h1>Présentation d'un diagramme de Gantt</h1> <!-- Titre centré -->
+    </header>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Le diagramme de Gantt, couramment utilisé en gestion de projet, est l'un des outils les plus efficaces pour représenter visuellement l'état d'avancement des différentes activités (tâches) qui constituent un projet.</p>
+        </section>
+        <section id="avantages">
+            <h2>Nous pouvons voir avec un diagramme de Gantt</h2>
+            <ul>
+                <li>Les différentes tâches à envisager</li>
+                <li>La date de début et la date de fin de chaque tâche</li>
+                <li>La durée escomptée de chaque tâche</li>
+                <li>Le chevauchement éventuel des tâches, et la durée de ce chevauchement</li>
+                <li>La date de début et la date de fin du projet dans son ensemble</li>
+            </ul>
+        </section>
+        <section id="conclusion">
+            <h2>En Résumé</h2>
+            <p>Un diagramme de Gantt répertorie toutes les tâches à accomplir pour mener le projet à bien, et indique la date à laquelle ces tâches doivent être effectuées (le planning).</p>
+        </section>
+        <div>
+            <h2>Logiciel permettant la fabrication d'un diagramme de Gantt</h2>
+            <p>
+                GanttProject :
+                <img id="img_g" src="../../icon_picture/gantt_ico.jpg" alt="Icône Gantt">
+            </p>
+        </div>
+        <section class="exemple_g">
+            <h2 class="title_g">Exemple d'un Diagramme de Gantt</h2>
+            <img id="img_c" src="../../document/Gantt-1.png">
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Présentation sur les Chatbots</p>
+    </footer>
+    <script>
+        document.getElementById("portfolio").addEventListener("click", function() {
+            document.location.href = '../../index.html';
+        });
+
+        document.getElementById("chatbot").addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = '../../projects_picture/Chatbot.pdf';
+            link.download = 'Présentation-Chatbot.pdf';
+            link.click();
+        });
+    </script>
+</body>
+</html>
