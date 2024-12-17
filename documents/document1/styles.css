@@ -28,7 +28,6 @@ header {
     align-items: center;      /* Aligner verticalement */
     position: relative;       /* Pour positionner la flèche de manière absolue */
     height: 60px;             /* Ajuste la hauteur du header si nécessaire */
-    background-color: #1e90ff;
     color: white;
     padding: 20px;
     text-align: center;
