@@ -272,15 +272,28 @@ nav {
     position: relative;
 }
 
+
+/* Conteneur des logos */
 .logos-slide {
     display: flex;
-    animation: scroll 10s linear infinite;
+    animation: scroll 10s linear infinite; /* Animation continue */
 }
 
+/* Images des logos */
 .logos-slide img {
-    width: 80px;
+    width: 100px;
     height: auto;
     margin: 0 10px;
+}
+
+/* Animation pour faire défiler les images */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Décale de 50% pour inclure les images clonées */
+    }
 }
 
 @keyframes scroll {
