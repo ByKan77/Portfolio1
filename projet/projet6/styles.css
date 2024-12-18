@@ -155,28 +155,31 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
-
-.rea .image-container {
-    display: flex; /* Dispose les éléments en ligne */
-    justify-content: space-evenly; /* Ajoute un espacement égal entre les images */
-    gap: 10px; /* Ajoute un petit espace entre les images */
-    margin-top: 10px;
+.image-container {
+    display: flex; /* Dispose les images en ligne */
+    justify-content: space-around; /* Espace égal autour des images */
+    gap: 15px; /* Espacement horizontal entre les images */
+    margin: 15px 0; /* Espacement vertical autour des conteneurs d'images */
 }
 
-.rea img {
-    max-width: 50%  ; /* Limite la largeur des images */
-    height: auto; /* Conserve le ratio d'aspect */
-    border: 1px solid #ccc; /* Optionnel : Ajoute une bordure légère */
-    border-radius: 5px; /* Optionnel : Ajoute des coins arrondis */
+.image-container img {
+    width: 45%; /* Les images occupent chacune 45% de la largeur */
+    height: auto; /* Conserve le ratio d'aspect des images */
+    border: 1px solid #ccc; /* Optionnel : Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
 }
-.title_d{
+
+.title_d {
     text-align: center;
-    padding-top: 25px;
+    padding-top: 15px;
+    margin-bottom: 10px; /* Ajout pour espacer le texte des images */
 }
-.title_h{
+
+.title_h {
     text-align: center;
-    padding-top: 25px;
+    margin-bottom: 20px; /* Ajout pour espacer le titre du contenu suivant */
 }
+
 #img_c {
     max-width: 50%; /* Limite la largeur des images */
     height: auto; /* Conserve le ratio d'aspect */
