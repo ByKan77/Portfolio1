@@ -12,7 +12,6 @@ body {
     padding: 20px;
 }
 
-
 header .back-arrow {
     position: absolute;      /* Positionnement absolu */
     left: -50px;              /* Décalage de la flèche vers la gauche */
@@ -72,7 +71,6 @@ li {
     font-size: 1.2em;
     margin: 5px 0;
 }
-
 
 
 body {
@@ -158,6 +156,37 @@ footer p {
     font-size: 0.9em;
 }
 
+.rea .image-container {
+    display: flex; /* Dispose les éléments en ligne */
+    justify-content: space-evenly; /* Ajoute un espacement égal entre les images */
+    gap: 10px; /* Ajoute un petit espace entre les images */
+    margin-top: 10px;
+}
+
+.rea img {
+    max-width: 50%  ; /* Limite la largeur des images */
+    height: auto; /* Conserve le ratio d'aspect */
+    border: 1px solid #ccc; /* Optionnel : Ajoute une bordure légère */
+    border-radius: 5px; /* Optionnel : Ajoute des coins arrondis */
+}
+.title_d{
+    text-align: center;
+    padding-top: 25px;
+}
+.title_h{
+    text-align: center;
+    padding-top: 25px;
+}
+#img_c {
+    max-width: 50%; /* Limite la largeur des images */
+    height: auto; /* Conserve le ratio d'aspect */
+    border-radius: 5px; /* Optionnel : Ajoute des coins arrondis */
+    margin: 0 auto; /* Centre l'image */
+    display: block; /* Nécessaire pour que le margin auto fonctionne */
+    padding-top: 15px;
+}
+
+
 .button-with-image {
     display: flex;
     align-items: center; /* Aligne l'image et le bouton verticalement */
@@ -176,4 +205,9 @@ footer p {
     gap: 20px; /* Espacement entre chaque groupe (image + bouton) */
     justify-content: center; /* Centre les éléments horizontalement */
     align-items: center; /* Aligne les images et boutons verticalement */
+}
+#a_site{
+    color: white;
+    text-decoration: none;
+    text-align: center;
 }

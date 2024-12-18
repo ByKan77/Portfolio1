@@ -164,3 +164,23 @@ footer p {
     margin: 0;
     font-size: 0.9em;
 }
+
+.button-with-image {
+    display: flex;
+    align-items: center; /* Aligne l'image et le bouton verticalement */
+    gap: 10px; /* Espacement entre l'image et le bouton */
+}
+.button-with-image img {
+    width: 30px; /* Largeur de l'image */
+    height: 30px; /* Hauteur de l'image */
+    object-fit: contain; /* Maintient les proportions de l'image */
+}
+
+.button-container2 {
+    justify-content: space-evenly;
+    margin-top: 50px;
+    display: flex;
+    gap: 20px; /* Espacement entre chaque groupe (image + bouton) */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: center; /* Aligne les images et boutons verticalement */
+}

@@ -10,17 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function toggleDetails(btn) {
-    var details = btn.parentElement.nextElementSibling; // Trouve le div ".details" associé
-    if (details.style.display === 'none' || details.style.display === '') {
-        details.style.display = 'block';
-        btn.textContent = '- Masquer les détails';
-    } else {
-        details.style.display = 'none';
-        btn.textContent = '+ Afficher les détails';
-    }
-}
-
 document.getElementById("Synthèse").addEventListener("click", function() {
     const pdfUrl = 'projects_picture/Tableau_Synthèse.pdf';
     
