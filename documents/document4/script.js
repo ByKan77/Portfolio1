@@ -7,9 +7,9 @@ function openPDF(pdfUrl) {
     }
 }
 
-document.getElementById("inv").addEventListener("click", function() {
+document.getElementById("symf").addEventListener("click", function() {
     const link = document.createElement("a");
-    link.href = '../../document/dinventaire.pdf';
-    link.download = 'Documentation_inventaire.pdf';
+    link.href = 'doc_symf/cours-symf.pdf';
+    link.download = 'documentation_symfony.pdf';
     link.click();
 });

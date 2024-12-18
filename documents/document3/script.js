@@ -6,3 +6,10 @@ function openPDF(pdfUrl) {
         alert('Impossible d\'ouvrir le PDF. Vérifiez les paramètres de votre navigateur.');
     }
 }
+
+document.getElementById("gantt").addEventListener("click", function() {
+    const link = document.createElement("a");
+    link.href = '../../document/ganttproject_guide.pdf';
+    link.download = 'documentation_gantt.pdf';
+    link.click();
+});

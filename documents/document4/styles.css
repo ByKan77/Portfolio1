@@ -11,34 +11,30 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-
-header .back-arrow {
-    position: absolute;      /* Positionnement absolu */
-    left: 10px;              /* Décalage de la flèche vers la gauche */
-    font-size: 50px;         /* Taille de la flèche */
-    text-decoration: none;   /* Enlever le soulignement du lien */
-    color: inherit;          /* Garder la couleur du texte */
-
-}
-
-/* Titre centré */
-header h1 {
-    margin: 0;               /* Enlever les marges par défaut */
-    font-size: 24px;         /* Ajuste la taille du titre si nécessaire */
-    text-align: center;      /* Centrer le texte */
-}
-
 header {
     display: flex;
-    justify-content: center;  /* Centrer le titre */
-    align-items: center;      /* Aligner verticalement */
-    position: relative;       /* Pour positionner la flèche de manière absolue */
-    height: 60px;             /* Ajuste la hauteur du header si nécessaire */
-    color: white;
+    justify-content: center; /* Centre uniquement le titre */
+    align-items: center;
+    position: relative; /* Nécessaire pour positionner la flèche */
+    height: 60px;
     padding: 20px;
-    text-align: center;
+    background-color: #0b3d91; /* Pour plus de contraste si nécessaire */
+    color: white;
 }
 
+header .back-arrow {
+    position: absolute; /* Permet de placer la flèche à gauche */
+    left: 20px; /* Place la flèche à une distance visible */
+    font-size: 2rem; /* Ajustez la taille de la flèche */
+    text-decoration: none;
+    color: inherit;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Ajuste la taille pour s'intégrer au header */
+    text-align: center;
+}
 h1 {
     font-size: 2.5em;
     margin: 0;
@@ -166,7 +162,6 @@ footer p {
 .rea img {
     max-width: 50%  ; /* Limite la largeur des images */
     height: auto; /* Conserve le ratio d'aspect */
-    border: 1px solid #ccc; /* Optionnel : Ajoute une bordure légère */
     border-radius: 5px; /* Optionnel : Ajoute des coins arrondis */
 }
 .title_d{
@@ -210,10 +205,4 @@ footer p {
     color: white;
     text-decoration: none;
     text-align: center;
-}
-#inventaire-image {
-    display: block;       /* Nécessaire pour le centrage horizontal */
-    margin: 0 auto;       /* Centre l'image horizontalement */
-    max-width: 30%;       /* Ajuste la taille maximale de l'image */
-    height: auto;         /* Conserve le ratio d'aspect */
 }

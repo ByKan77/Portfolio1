@@ -40,22 +40,17 @@
         <section class="exemple_g">
             <h2 class="title_g">Exemple d'un Diagramme de Gantt</h2>
             <img id="img_c" src="../../document/Gantt-1.png">
+            <div class="button-container2">
+                <div class="button-with-image">
+                    <button id="gantt">Télécharger la documentation de Gantt</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('../../document/ganttproject_guide.pdf')"></a>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Présentation sur les Chatbots</p>
     </footer>
-    <script>
-        document.getElementById("portfolio").addEventListener("click", function() {
-            document.location.href = '../../index.html';
-        });
-
-        document.getElementById("chatbot").addEventListener("click", function() {
-            const link = document.createElement("a");
-            link.href = '../../projects_picture/Chatbot.pdf';
-            link.download = 'Présentation-Chatbot.pdf';
-            link.click();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
