@@ -572,3 +572,68 @@ li {
 .visible {
     display: block;
 }
+
+/* Styles pour le bouton burger */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    z-index: 1001;
+}
+
+.burger div {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--high-contrast-text);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+}
+
+/* Styles pour la navbar en mode mobile */
+@media (max-width: 768px) {
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--background-solid);
+        position: absolute;
+        top: 4.5em;
+        left: 0;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+
+    .links li {
+        margin: 1em 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .links.show {
+        display: flex;
+    }
+}

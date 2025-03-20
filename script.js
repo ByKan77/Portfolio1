@@ -70,3 +70,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.links');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('show');
+        burger.classList.toggle('toggle');
+    });
+});
