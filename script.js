@@ -23,12 +23,12 @@ document.getElementById("Synthèse").addEventListener("click", function() {
 });
 
 document.getElementById("CV").addEventListener("click", function() {
-    const pdfUrl = 'projects_picture/CV_Ouadah_Sofiane_Alternance.pdf';
+    const pdfUrl = 'projects_picture/CV_Sofiane_Ouadah.pdf';
     
     // Créer un lien temporaire pour le téléchargement
     const link = document.createElement("a");
     link.href = pdfUrl;  // L'URL du PDF à télécharger
-    link.download = 'CV_Ouadah_Sofiane_Alternance.pdf';  // Nom du fichier lors du téléchargement
+    link.download = 'CV_Ouadah_Sofiane.pdf';  // Nom du fichier lors du téléchargement
     
     // Simuler un clic sur le lien pour déclencher le téléchargement
     link.click();
