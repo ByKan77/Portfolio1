@@ -1,12 +1,24 @@
 :root {
-    --background: #E6F2FF; /* Bleu clair pour l'arrière-plan */
-    --background-element: rgba(230, 242, 255, 0.7); /* Bleu très clair avec transparence */
-    --background-solid: rgba(230, 242, 255, 0.9); /* Bleu très clair solide avec transparence */
-    --hovered-element: rgba(0, 123, 255, 0.2); /* Effet de survol bleu */
-    --high-contrast-text: #000080; /* Texte bleu marine */
-    --accent-color: #0000FF; /* Bleu */
-    --font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  /* === FOND ET STRUCTURE === */
+  --background: #0D1B2A; /* Bleu nuit profond */
+  --background-element: #1B263B; /* Bleu foncé pour les éléments */
+  --background-solid: #1E2A3C; /* Variante légèrement plus claire pour la profondeur */
+
+  /* === ÉTATS INTERACTIFS === */
+  --hovered-element: rgba(97, 153, 255, 0.15); /* Bleu clair transparent au survol */
+  --hover-color: #6199FF; /* Bleu vif au hover */
+
+  /* === TEXTE ET CONTRASTES === */
+  --text-color: #ffffff; /* Blanc cassé pour le texte */
+  --high-contrast-text: #ffffff; /* Blanc pur pour éléments critiques (titres, boutons) */
+
+  /* === COULEUR D’ACCENT === */
+  --accent-color: #4DA3FF; /* Bleu électrique pour les boutons, liens, détails */
+  
+  /* === POLICE === */
+  --font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
+
 
 
 * {
@@ -166,7 +178,7 @@ nav {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(250px, 1fr));  /* Deux colonnes égales avec une taille minimale */
     gap: 2em;
     padding-top: 1em;
 }
@@ -193,11 +205,11 @@ nav {
 
 .project img {
     width: 100%;
-    height: auto;
-    max-height: 400px; /* Maximum height for project images */
+    height: 100%;
+    object-fit: cover;  /* Utilise cover pour que l'image remplisse son conteneur tout en conservant l'aspect */
+    max-height: 250px;  /* Limite la hauteur des images */
     border-radius: 20px;
     margin-bottom: 1em;
-    object-fit: contain; /* Ensures the image is fully visible */
 }
 
 .project span {
@@ -308,8 +320,8 @@ nav {
 
 .three-columns-grid {
     display: grid;
-    grid-auto-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));  /* Trois colonnes égales avec une taille minimale */
+    gap: 1.5em;
 }
 
 
@@ -481,7 +493,7 @@ li {
 }
 
 .color_h{
-    color: #000080;
+    color: #020202;
 }
 
 #aboutColumn {
@@ -560,7 +572,8 @@ li {
 
 .details,
 .about-me-content {
-    margin-top: 15px; /* Ajoute un écart entre le bouton et le conteneur des détails */
+    margin-top: 15px;
+    color: #000000; /* Ajoute un écart entre le bouton et le conteneur des détails */
 }
 
 /* Contenu masqué par défaut */
@@ -636,4 +649,15 @@ li {
     .links.show {
         display: flex;
     }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

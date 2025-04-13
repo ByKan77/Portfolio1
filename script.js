@@ -80,3 +80,26 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.classList.toggle('toggle');
     });
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+document.querySelectorAll('section').forEach(section => {
+    observer.observe(section);
+});
+
+ScrollReveal().reveal('section', {
+    origin: 'bottom',
+    distance: '50px',
+    duration: 800,
+    delay: 200,
+    easing: 'ease-in-out',
+    reset: false
+});
