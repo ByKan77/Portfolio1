@@ -33,7 +33,7 @@
                 </ul>
             </section>
 
-            <div class="button-container visible">
+            <div class="button-container">
                 <button id="play-button">Jouer Maintenant</button>
             </div>
 
@@ -50,16 +50,6 @@
         </footer>
     </div>
 
-    <script>
-        function openPDF(url) {
-            window.open(url, "_blank");
-        }
-
-        // Optionnel : animation d’apparition automatique
-        document.addEventListener("DOMContentLoaded", () => {
-            const sections = document.querySelectorAll("main section, .button-container, .button-container2");
-            sections.forEach(section => section.classList.add("visible"));
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
