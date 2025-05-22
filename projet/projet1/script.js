@@ -21,3 +21,8 @@ function openPDF(pdfUrl) {
         alert('Impossible d\'ouvrir le PDF. Vérifiez les paramètres de votre navigateur.');
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("main section");
+        sections.forEach(sec => sec.classList.add("visible"));
+    });

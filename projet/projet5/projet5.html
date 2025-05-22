@@ -1,44 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bibliothèque V2</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bibliothèque V2</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-            <h1>Projet Bibliothèque</h1> <!-- Titre centré -->
-        </header>
-        <main>
-            <section class="rea">
-                <h2 class="title_h">Explication</h2>
-                <div id="gestionAdmin">
-                    <p>Bibliothèque V2 est un site pour une bibliothèque étudiante, les élèves peuvent se connecter et voir les livres qu'ils ont réserver.</p>
-                    <p class="title_d">Espace Login et Connexion</p>
-                    <div class="image-container">
-                        <img src="biblio_picture/Inscription_BT2.png" alt="Factu1">
-                        <img src="biblio_picture/login_BB2.png" alt="Factu2">
-                    </div>
-                    <p class="title_d">Affichage client et facture</p>
-                    <p>Les livres sont afficher avec un filtre qui les classes, nous pouvons ensuite cliquer sur le livre pour voir sa description</p>
-                    <div class="image-container">
-                        <img src="biblio_picture/photo1_BT2.png" alt="Factu3">
-                        <img src="biblio_picture/Desc_BB2.png" alt="Factu4">
-                    </div>
-                </div>
-            </section>
-            <a target="_blank" id="a_site" href="https://groupe-b-recette.ipssi-sio.fr/index.php">Lien vers le site internet</a>
-            <div class="button-container2">
-                <div class="button-with-image">
-                    <button id="tyfali">Télécharger la documentation</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('biblio_picture/doc_bb2_V2.pdf')"></a>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script src="script.js"></script>
+  <div class="container">
+    <header>
+      <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+      <h1>Projet Bibliothèque</h1>
+    </header>
+
+    <main>
+      <section class="rea visible">
+        <h2 class="title_h">Explication</h2>
+        <div id="gestionAdmin">
+          <p class="title_d">
+            Bibliothèque V2 est un site pour une bibliothèque étudiante, les élèves peuvent se connecter et voir les livres qu'ils ont réservés.
+          </p>
+
+          <p class="title_d">Espace Login et Connexion</p>
+          <div class="image-container">
+            <img src="biblio_picture/Inscription_BT2.png" alt="Inscription">
+            <img src="biblio_picture/login_BB2.png" alt="Connexion">
+          </div>
+
+          <p class="title_d">Affichage client et facture</p>
+          <p>
+            Les livres sont affichés avec un filtre qui les classe, et on peut cliquer sur un livre pour voir sa description.
+          </p>
+          <div class="image-container">
+            <img src="biblio_picture/photo1_BT2.png" alt="Liste Livres">
+            <img src="biblio_picture/Desc_BB2.png" alt="Description Livre">
+          </div>
+        </div>
+      </section>
+
+      <a target="_blank" id="a_site" href="https://groupe-b-recette.ipssi-sio.fr/index.php">Lien vers le site internet</a>
+
+      <div class="button-container2 visible">
+        <div class="button-with-image">
+          <button id="doc">Télécharger la documentation</button>
+          <a href="#"><img src="../../icon_picture/eye.png" alt="Voir PDF" onclick="openPDF('biblio_picture/doc_bb2_V2.pdf')"></a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function openPDF(url) {
+      window.open(url, "_blank");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("section").forEach(section => {
+        section.classList.add("visible");
+      });
+    });
+  </script>
 </body>
 </html>

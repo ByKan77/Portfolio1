@@ -13,3 +13,8 @@ document.getElementById("gantt").addEventListener("click", function() {
     link.download = 'documentation_gantt.pdf';
     link.click();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("main section");
+        sections.forEach(sec => sec.classList.add("visible"));
+    });

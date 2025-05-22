@@ -1,49 +1,89 @@
+:root {
+    --background: #0D1B2A;
+    --background-element: #1B263B;
+    --background-solid: #1E2A3C;
+    --hovered-element: rgba(97, 153, 255, 0.15);
+    --hover-color: #6199FF;
+    --text-color: #ffffff;
+    --high-contrast-text: #ffffff;
+    --accent-color: #4DA3FF;
+    --font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #0b3d91; /* Bleu foncé */
-    color: #333;
     margin: 0;
-    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--text-color);
 }
 
-header .back-arrow {
-    position: absolute;      /* Positionnement absolu */
-    left: 10px;              /* Décalage de la flèche vers la gauche */
-    font-size: 50px;         /* Taille de la flèche */
-    text-decoration: none;   /* Enlever le soulignement du lien */
-    color: inherit;          /* Garder la couleur du texte */
-
-}
-
-/* Titre centré */
-header h1 {
-    margin: 0;               /* Enlever les marges par défaut */
-    font-size: 24px;         /* Ajuste la taille du titre si nécessaire */
-    text-align: center;      /* Centrer le texte */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-element);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header {
     display: flex;
-    justify-content: center;  /* Centrer le titre */
-    align-items: center;      /* Aligner verticalement */
-    position: relative;       /* Pour positionner la flèche de manière absolue */
-    height: 60px;             /* Ajuste la hauteur du header si nécessaire */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    padding: 20px;
-    padding-bottom: 60px; /* Ajout de padding-bottom pour créer de l'espace au-dessus du footer */
-}
-
-section {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    background-color: var(--background-solid);
+    border-radius: 10px;
     margin-bottom: 20px;
 }
 
+header h1 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    margin: 0;
+    text-align: center;
+}
+
+header .back-arrow {
+    position: absolute;
+    left: 20px;
+    font-size: 32px;
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+header .back-arrow:hover {
+    color: var(--hover-color);
+}
+
+main {
+    margin: 20px 0;
+}
+
+section {
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 h2 {
-    color: #e6f7ff;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
 }
 
 ul {
@@ -52,92 +92,78 @@ ul {
 }
 
 ul li {
-    background-color: #e6f7ff;
-    margin: 5px 0;
+    background-color: var(--hovered-element);
+    margin: 5px auto;
     padding: 10px;
-    border-left: 5px solid #1e90ff;
-    margin-right: 50%;
-    border-radius: 10px;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 8px;
+    max-width: 80%;
 }
 
-
-footer {
-background-color: #0b3d91; /* Bleu foncé */
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.button-container {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.button-container2 {
-    text-align: center;
-    margin-top: 20px;
-}
-
-button {
-    background-color: #1e90ff;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2em;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #1c86ee;
-}
-p{
-    color: #fff;
-}
 #img_g {
-    width: 20px; /* Ajustez la largeur de l'icône */
-    height: 20px; /* Assurez-vous que la hauteur est cohérente */
-    vertical-align: middle; /* Aligne l'image avec le texte */
-    margin-left: 5px; /* Ajoute un espace entre le texte et l'icône */
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 #img_c {
-    max-width: 50%; /* Limite la largeur des images */
-    height: auto; /* Conserve le ratio d'aspect */
-    border-radius: 5px; /* Optionnel : Ajoute des coins arrondis */
-    margin: 0 auto; /* Centre l'image */
-    display: block; /* Nécessaire pour que le margin auto fonctionne */
-    padding-top: 15px;
+    max-width: 50%;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
-.title_g{
+
+.title_g {
     text-align: center;
     padding-top: 25px;
 }
-.button-with-image {
-    display: flex;
-    align-items: center; /* Aligne l'image et le bouton verticalement */
-    gap: 10px; /* Espacement entre l'image et le bouton */
-}
-.button-with-image img {
-    width: 30px; /* Largeur de l'image */
-    height: 30px; /* Hauteur de l'image */
-    object-fit: contain; /* Maintient les proportions de l'image */
-}
 
 .button-container2 {
-    justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
-    gap: 20px; /* Espacement entre chaque groupe (image + bouton) */
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Aligne les images et boutons verticalement */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.button-with-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-with-image img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+button {
+    background-color: var(--accent-color);
+    border: none;
+    color: var(--high-contrast-text);
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: var(--hovered-element);
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ffffff33;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: var(--text-color);
 }

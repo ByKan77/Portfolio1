@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dayliho</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Mobile SFO</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-            <h1>Application Mobile SFO</h1> <!-- Titre centré -->
-        </header>
-        <main>
-            <section class="rea"> 
-                <h2 class="title_h">Explication</h2>
-                <div class="gestionAdmin">
-                    <p class="title_d">
-                       Lors de mon stage au sein de l’entreprise SFO, j’ai développé une application mobile de gestion de stock adaptée aux besoins d’une entreprise spécialisée dans la plomberie.</br>
-                    </br>
-                       Cette application permet d’ajouter, de supprimer et de consulter les produits stockés, en mettant l’accent sur les matériaux de plomberie.</br></br>
-                       J’ai également intégré une fonctionnalité de référencement des magasins partenaires, facilitant ainsi l’approvisionnement en matériel.</br></br>
-                        Ce projet m’a permis de mettre en pratique mes compétences en développement mobile tout en répondant à une problématique concrète de gestion logistique.
-                    </p>
-                </div>
-                <div class="button-container2">
-                <div class="button-with-image">
-                    <button id="appClientBtn">Télécharger la documentation client</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir la documentation application client" onclick="openPDF('doc_SFO/DocClientSFO.pdf')"></a>
-                </div>
-            </div>
-            </section>
+  <div class="container">
+    <header>
+      <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+      <h1>Application Mobile SFO</h1>
+    </header>
 
-        </main>
-    </div>
-    <script src="script.js"></script>
+    <main>
+      <section class="rea visible">
+        <h2 class="title_h">Explication</h2>
+        <div class="gestionAdmin">
+          <p class="title_d">
+            Lors de mon stage au sein de l’entreprise SFO, j’ai développé une application mobile de gestion de stock adaptée aux besoins d’une entreprise spécialisée dans la plomberie.<br><br>
+            Cette application permet d’ajouter, de supprimer et de consulter les produits stockés, en mettant l’accent sur les matériaux de plomberie.<br><br>
+            J’ai également intégré une fonctionnalité de référencement des magasins partenaires, facilitant ainsi l’approvisionnement en matériel.<br><br>
+            Ce projet m’a permis de mettre en pratique mes compétences en développement mobile tout en répondant à une problématique concrète de gestion logistique.
+          </p>
+        </div>
+
+        <div class="button-container2">
+          <div class="button-with-image">
+            <button id="appClientBtn">Télécharger la documentation client</button>
+            <a href="#">
+              <img src="../../icon_picture/eye.png" alt="Voir la documentation application client" onclick="openPDF('doc_SFO/DocClientSFO.pdf')">
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function openPDF(url) {
+      window.open(url, "_blank");
+    }
+
+    // Animation slide-in
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("section").forEach(section => {
+        section.classList.add("visible");
+      });
+    });
+  </script>
 </body>
 </html>

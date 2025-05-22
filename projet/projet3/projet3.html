@@ -1,48 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation du Site</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site Tyfali Consulting</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-            <h1>Site Tyfali Consulting</h1> <!-- Titre centré -->
-        </header>
-        <main>
-            <section class="game-info">
-                <h2 class="title_h">Cahier Des Charges</h2>
-                <img id="img_c" src="image_tyfali/cahier_charge_site.png">
-            </section>
-            <section class="rea">
-                <h2 class="title_h">Présentation des choses réalisées</h2>
-                <div id="gestionAdmin">
-                    <p class="title_d">Réalisation de l'espace Admin/Gestion de décoration</p>
-                    <div class="image-container">
-                        <img src="image_tyfali/Décoration1_admin.png" alt="Décoration_Admin_1">
-                        <img src="image_tyfali/Décoration2_admin.png" alt="Décoration_Admin_2">
-                    </div>
-                </div>
-                <div id="collab">
-                    <p class="title_d">Réalisation de l'espace collaborateur</p>
-                    <div class="image-container">
-                        <img src="image_tyfali/Demande_congés.png" alt="Demande_Congés">
-                        <img src="image_tyfali/Relevé_activité.png" alt="Relevé_Activité">
-                    </div>
-                </div>
-            </section>
-            <a target="_blank" id="a_site" href="https://www.tyfali.fr/#Accueil">Lien vers le site internet</a>
-            <div class="button-container2">
-                <div class="button-with-image">
-                    <button id="tyfali">Télécharger le rapport de stage</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('../../projects_picture/tyfali.pdf')"></a>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script src="script.js"></script>
+  <div class="container">
+    <header>
+      <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+      <h1>Site Tyfali Consulting</h1>
+    </header>
+
+    <main>
+      <section class="game-info visible">
+        <h2 class="title_h">Cahier Des Charges</h2>
+        <img id="img_c" src="image_tyfali/cahier_charge_site.png" alt="Cahier des charges" />
+      </section>
+
+      <section class="rea visible">
+        <h2 class="title_h">Présentation des choses réalisées</h2>
+
+        <div id="gestionAdmin">
+          <p class="title_d">Réalisation de l'espace Admin / Gestion de décoration</p>
+          <div class="image-container">
+            <img src="image_tyfali/Décoration1_admin.png" alt="Décoration Admin 1" />
+            <img src="image_tyfali/Décoration2_admin.png" alt="Décoration Admin 2" />
+          </div>
+        </div>
+
+        <div id="collab">
+          <p class="title_d">Réalisation de l'espace collaborateur</p>
+          <div class="image-container">
+            <img src="image_tyfali/Demande_congés.png" alt="Demande Congés" />
+            <img src="image_tyfali/Relevé_activité.png" alt="Relevé Activité" />
+          </div>
+        </div>
+      </section>
+
+      <a target="_blank" id="a_site" href="https://www.tyfali.fr/#Accueil">Lien vers le site internet</a>
+
+      <section class="button-container2 visible">
+        <div class="button-with-image">
+          <button id="tyfali">Télécharger le rapport de stage</button>
+          <a href="#">
+            <img src="../../icon_picture/eye.png" alt="Voir rapport" onclick="openPDF('../../projects_picture/tyfali.pdf')" />
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function openPDF(url) {
+      window.open(url, "_blank");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("section").forEach(section => {
+        section.classList.add("visible");
+      });
+    });
+  </script>
 </body>
 </html>

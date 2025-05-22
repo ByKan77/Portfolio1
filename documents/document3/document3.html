@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,50 +7,54 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-        <h1>Présentation d'un diagramme de Gantt</h1> <!-- Titre centré -->
-    </header>
-    <main>
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Le diagramme de Gantt, couramment utilisé en gestion de projet, est l'un des outils les plus efficaces pour représenter visuellement l'état d'avancement des différentes activités (tâches) qui constituent un projet.</p>
-        </section>
-        <section id="avantages">
-            <h2>Nous pouvons voir avec un diagramme de Gantt</h2>
-            <ul>
-                <li>Les différentes tâches à envisager</li>
-                <li>La date de début et la date de fin de chaque tâche</li>
-                <li>La durée escomptée de chaque tâche</li>
-                <li>Le chevauchement éventuel des tâches, et la durée de ce chevauchement</li>
-                <li>La date de début et la date de fin du projet dans son ensemble</li>
-            </ul>
-        </section>
-        <section id="conclusion">
-            <h2>En Résumé</h2>
-            <p>Un diagramme de Gantt répertorie toutes les tâches à accomplir pour mener le projet à bien, et indique la date à laquelle ces tâches doivent être effectuées (le planning).</p>
-        </section>
-        <div>
-            <h2>Logiciel permettant la fabrication d'un diagramme de Gantt</h2>
-            <p>
-                GanttProject :
-                <img id="img_g" src="../../icon_picture/gantt_ico.jpg" alt="Icône Gantt">
-            </p>
-        </div>
-        <section class="exemple_g">
-            <h2 class="title_g">Exemple d'un Diagramme de Gantt</h2>
-            <img id="img_c" src="../../document/Gantt-1.png">
+    <div class="container">
+        <header>
+            <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+            <h1>Présentation d’un diagramme de Gantt</h1>
+        </header>
+        <main>
+            <section class="visible">
+                <h2>Introduction</h2>
+                <p>Le diagramme de Gantt est un outil visuel puissant en gestion de projet. Il permet de suivre l’avancement des tâches, de planifier efficacement et de respecter les délais du projet.</p>
+            </section>
+
+            <section class="visible">
+                <h2>Ce qu’il permet d’observer</h2>
+                <ul>
+                    <li>Les différentes tâches à envisager</li>
+                    <li>Les dates de début et de fin de chaque tâche</li>
+                    <li>La durée estimée de chaque tâche</li>
+                    <li>Les chevauchements éventuels entre les tâches</li>
+                    <li>Les dates globales du projet</li>
+                </ul>
+            </section>
+
+            <section class="visible">
+                <h2>En résumé</h2>
+                <p>Le Gantt affiche toutes les étapes nécessaires à la réussite d’un projet, avec leur temporalité. Il est idéal pour piloter et organiser.</p>
+            </section>
+
+            <section class="visible">
+                <h2>Logiciel recommandé</h2>
+                <p>GanttProject <img id="img_g" src="../../icon_picture/gantt_ico.jpg" alt="Icône Gantt"></p>
+            </section>
+
+            <section class="visible">
+                <h2 class="title_g">Exemple d’un diagramme de Gantt</h2>
+                <img id="img_c" src="../../document/Gantt-1.png" alt="Exemple Gantt">
+            </section>
+
             <div class="button-container2">
                 <div class="button-with-image">
-                    <button id="gantt">Télécharger la documentation de Gantt</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('../../document/ganttproject_guide.pdf')"></a>
+                    <button id="gantt">Télécharger la documentation</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir PDF" onclick="openPDF('../../document/ganttproject_guide.pdf')"></a>
                 </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Présentation sur les Chatbots</p>
-    </footer>
+        </main>
+        <footer>
+            <p>&copy; 2024 - Présentation Gantt</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

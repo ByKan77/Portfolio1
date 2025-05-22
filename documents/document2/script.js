@@ -13,3 +13,8 @@ document.getElementById("inv").addEventListener("click", function() {
     link.download = 'Documentation_inventaire.pdf';
     link.click();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("main section");
+        sections.forEach(sec => sec.classList.add("visible"));
+    });

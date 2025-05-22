@@ -9,15 +9,21 @@
 <body>
     <div class="container">
         <header>
-            <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-            <h1>Un Jeu Incroyable</h1> <!-- Titre centré -->
+            <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+            <h1>Un Jeu Incroyable</h1>
         </header>
+
         <main>
-            <section class="game-info">
+            <section class="game-info visible">
                 <h2>À propos du jeu</h2>
-                <p>Découvrez une aventure extraordinaire dans un monde fantastique. Affrontez des mathématiques redoutables, résolvez des énigmes complexes et devenez le héros que vous avez toujours rêvé d'être en mathématiques.</p>
+                <p>
+                    Découvrez une aventure extraordinaire dans un monde fantastique.
+                    Affrontez des mathématiques redoutables, résolvez des énigmes complexes
+                    et devenez le héros que vous avez toujours rêvé d'être en mathématiques.
+                </p>
             </section>
-            <section class="features">
+
+            <section class="features visible">
                 <h2>Caractéristiques</h2>
                 <ul>
                     <li>Graphismes époustouflants</li>
@@ -26,21 +32,34 @@
                     <li>Problèmes complexes</li>
                 </ul>
             </section>
-            <div class="button-container">
+
+            <div class="button-container visible">
                 <button id="play-button">Jouer Maintenant</button>
             </div>
-            <div class="button-container2">
+
+            <div class="button-container2 visible">
                 <div class="button-with-image">
                     <button id="math">Télécharger la documentation de &=10</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('doc_jeu/Jeu_mathematique.pdf')"></a>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir PDF" onclick="openPDF('doc_jeu/Jeu_mathematique.pdf')"></a>
                 </div>
             </div>
         </main>
+
         <footer>
             <p>&copy; 2024 Un Jeu Incroyable. Tous droits réservés.</p>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function openPDF(url) {
+            window.open(url, "_blank");
+        }
+
+        // Optionnel : animation d’apparition automatique
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("main section, .button-container, .button-container2");
+            sections.forEach(section => section.classList.add("visible"));
+        });
+    </script>
 </body>
 </html>

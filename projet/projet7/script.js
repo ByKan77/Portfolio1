@@ -33,3 +33,9 @@ document.getElementById("appTechBtn").addEventListener("click", function() {
     link.download = 'Documentation_application_technique_dailyho.pdf';
     link.click();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("section").forEach(section => {
+        section.classList.add("visible");
+    });
+});

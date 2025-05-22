@@ -1,82 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dayliho</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Projet Dayliho</title>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-            <h1>Projet Dayliho</h1> <!-- Titre centré -->
+            <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+            <h1>Projet Dayliho</h1>
         </header>
         <main>
-            <section class="rea"> 
+            <section class="rea visible">
                 <h2 class="title_h">Explication</h2>
                 <div class="gestionAdmin">
                     <p class="title_d">
-                        Dayliho est un site internet qui est la mise en place de séance de sport, en cours de fabrication durant la deuxième année de BTS SIO.</br>
-                        Il sera composé de deux parties : </br>- Le site internet qui donne accès aux coachs pour publier des vidéos, voir les avis et planifier des séances.
-                                                            </br>- L'application, qui donnera accès aux utilisateurs de s'inscrire à la séance.
+                        Dayliho est un site internet dédié à la réservation de séances de sport. <br><br>
+                        Il comprend deux parties distinctes :<br>
+                        – Un site web pour les coachs : publication de vidéos, gestion des avis et planification des séances. <br>
+                        – Une application mobile pour les utilisateurs : consultation et inscription aux séances.
                     </p>
                 </div>
+
                 <div class="gestionAdmin">
-                    <p class="title_d">Login et page lors de la connexion.</p>
+                    <p class="title_d">Login et page profil après connexion</p>
                     <div class="image-container">
-                        <img src="doc_daily/Login_d.png" alt="login_d">
-                        <img src="doc_daily/profil_d.png" alt="profil_d">
+                        <img src="doc_daily/Login_d.png" alt="login_d" />
+                        <img src="doc_daily/profil_d.png" alt="profil_d" />
                     </div>
                 </div>
+
                 <div class="collab">
-                    <p class="title_d">Planning et création de séance par le coach.</p>
+                    <p class="title_d">Planning & création de séance (coach)</p>
                     <div class="image-container">
-                        <img src="doc_daily/plan_d.png" alt="planning">
-                        <img src="doc_daily/new_s_d.png" alt="new_seance">
+                        <img src="doc_daily/plan_d.png" alt="planning" />
+                        <img src="doc_daily/new_s_d.png" alt="new_seance" />
                     </div>
                 </div>
             </section>
-            
+
             <div class="button-container2">
                 <div class="button-with-image">
-                    <button id="dailyClientBtn">Télécharger la documentation client</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir la documentation client" onclick="openPDF('doc_daily/dailyclient.pdf')"></a>
+                    <button id="dailyClientBtn">Documentation client (site)</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir" onclick="openPDF('doc_daily/dailyclient.pdf')"/></a>
                 </div>
-            </div>
-            <div class="button-container2">
                 <div class="button-with-image">
-                    <button id="dailyTechBtn">Télécharger la documentation technique</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir la documentation technique" onclick="openPDF('doc_daily/dailytechnique.pdf')"></a>
+                    <button id="dailyTechBtn">Documentation technique (site)</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir" onclick="openPDF('doc_daily/dailytechnique.pdf')"/></a>
                 </div>
             </div>
 
-            <section class="mobile-app">
+            <section class="mobile-app visible">
                 <h2 class="title_h">Application Mobile</h2>
                 <div class="gestionAdmin">
                     <p class="title_d">
-                        L'application mobile Dayliho permet aux utilisateurs de consulter les séances disponibles et de réserver leur place facilement.
-                        Elle inclut également un suivi des séances passées et à venir, ainsi qu'un système de notification pour rappeler les séances programmées.
+                        L'application permet aux utilisateurs de réserver des séances, consulter l’historique, et recevoir des notifications.
                     </p>
                 </div>
             </section>
 
             <div class="button-container2">
                 <div class="button-with-image">
-                    <button id="appClientBtn">Télécharger la documentation application client</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir la documentation application client" onclick="openPDF('doc_daily/dailyapp.pdf')"></a>
+                    <button id="appClientBtn">Documentation client (app)</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir" onclick="openPDF('doc_daily/DocAppClientDayli.pdf')"/></a>
                 </div>
-            </div>
-            <div class="button-container2">
                 <div class="button-with-image">
-                    <button id="appTechBtn">Télécharger la documentation application technique</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir la documentation application technique" onclick="openPDF('doc_daily/dailyapptech.pdf')"></a>
+                    <button id="appTechBtn">Documentation technique (app)</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir" onclick="openPDF('doc_daily/dailyapptech.pdf')"/></a>
                 </div>
             </div>
-
-
         </main>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

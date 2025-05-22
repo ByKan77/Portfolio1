@@ -1,43 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLPI</title>
+    <title>Présentation GLPI</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-        <h1>Présentation du GLPI</h1> <!-- Titre centré -->
-    </header>
-    <main>
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>GLPI est une application web qui donne la possibilité de visualiser et gérer son système d'information de manière complète.
-            </p>
-        </section>
-        <section id="avantages">
-            <h2>Avantages de GLPI</h2>
-            <ul>
-                <li>Inventaire de toutes les ressources de la société</li>
-                <li>Gestion des tâches administratives et financières</li>
-            </ul>
-        </section>
+    <div class="container">
+        <header>
+            <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+            <h1>Présentation du GLPI</h1>
+        </header>
+        <main>
+            <section id="introduction" class="visible">
+                <h2>Introduction</h2>
+                <p>GLPI est une application web qui donne la possibilité de visualiser et gérer son système d'information de manière complète.</p>
+            </section>
 
+            <section id="avantages" class="visible">
+                <h2>Avantages de GLPI</h2>
+                <ul>
+                    <li>Inventaire de toutes les ressources de la société</li>
+                    <li>Gestion des tâches administratives et financières</li>
+                </ul>
+            </section>
 
-        <img id="GLPI_logo" src="../../icon_picture/GLPI_logo.png">
+            <img id="GLPI_logo" src="../../icon_picture/GLPI_logo.png" alt="Logo GLPI">
 
-        <div class="button-container2">
-            <div class="button-with-image">
-                <button id="GLPI">Télécharger la documentation GLPI</button>
-                <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('../../document/GLPI.pdf')"></a>
+            <div class="button-container2">
+                <div class="button-with-image">
+                    <button id="GLPI">Télécharger la documentation GLPI</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir PDF" onclick="openPDF('../../document/GLPI.pdf')"></a>
+                </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Présentation sur GLPI</p>
-    </footer>
+        </main>
+        <footer>
+            <p>&copy; 2024 Présentation sur GLPI</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,179 +1,162 @@
+:root {
+    --background: #0D1B2A;
+    --background-element: #1B263B;
+    --background-solid: #1E2A3C;
+    --hovered-element: rgba(97, 153, 255, 0.15);
+    --hover-color: #6199FF;
+    --text-color: #ffffff;
+    --high-contrast-text: #ffffff;
+    --accent-color: #4DA3FF;
+    --font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 
+/* === GÉNÉRAL === */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0b3d91; /* Bleu foncé */
-    color: white;
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--text-color);
 }
 
+/* === CONTENEUR === */
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
+    background-color: var(--background-element);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-header .back-arrow {
-    position: absolute;      /* Positionnement absolu */
-    left: -50px;              /* Décalage de la flèche vers la gauche */
-    font-size: 50px;         /* Taille de la flèche */
-    text-decoration: none;   /* Enlever le soulignement du lien */
-    color: inherit;          /* Garder la couleur du texte */
-
-}
-
-/* Titre centré */
-header h1 {
-    margin: 0;               /* Enlever les marges par défaut */
-    font-size: 24px;         /* Ajuste la taille du titre si nécessaire */
-    text-align: center;      /* Centrer le texte */
-}
-
+/* === HEADER === */
 header {
     display: flex;
-    justify-content: center;  /* Centrer le titre */
-    align-items: center;      /* Aligner verticalement */
-    position: relative;       /* Pour positionner la flèche de manière absolue */
-    height: 60px;             /* Ajuste la hauteur du header si nécessaire */
-    color: white;
-    padding: 20px;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    background-color: var(--background-solid);
+    color: var(--text-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 2.5em;
+header h1 {
+    font-size: 2rem;
     margin: 0;
+    text-align: center;
+    color: var(--accent-color);
 }
 
+header .back-arrow {
+    position: absolute;
+    left: 20px;
+    font-size: 32px;
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+header .back-arrow:hover {
+    color: var(--hover-color);
+}
+
+/* === SECTIONS === */
 main {
     margin: 20px 0;
 }
 
 section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 h2 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin-bottom: 10px;
+    color: var(--accent-color);
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.6;
+    color: var(--text-color);
 }
 
+/* === LISTES === */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
 li {
-    font-size: 1.2em;
-    margin: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0b3d91; /* Bleu foncé */
-    color: white;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-
-
-h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-main {
-    margin: 20px 0;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    font-size: 1.2em;
-    margin: 5px 0;
-}
-
-.button-container {
+/* === BOUTONS === */
+.button-container,
+.button-container2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 button {
-    background-color: #1e90ff;
+    background-color: var(--accent-color);
     border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2em;
-    margin: 4px 2px;
+    color: var(--high-contrast-text);
+    padding: 12px 24px;
+    font-size: 1em;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.2s;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 button:hover {
-    background-color: #1c86ee;
+    background-color: var(--hovered-element);
+    color: var(--accent-color);
+    transform: translateY(-2px);
 }
 
+/* === BOUTONS AVEC IMAGE === */
+.button-with-image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-with-image img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* === FOOTER === */
 footer {
     text-align: center;
     padding: 20px 0;
     border-top: 1px solid #ffffff33;
-}
-
-footer p {
-    margin: 0;
+    margin-top: 40px;
     font-size: 0.9em;
+    color: var(--text-color);
 }
 
-.button-with-image {
-    display: flex;
-    align-items: center; /* Aligne l'image et le bouton verticalement */
-    gap: 10px; /* Espacement entre l'image et le bouton */
-}
-.button-with-image img {
-    width: 30px; /* Largeur de l'image */
-    height: 30px; /* Hauteur de l'image */
-    object-fit: contain; /* Maintient les proportions de l'image */
+/* === ANIMATION ENTRÉE DOUCE === */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.button-container2 {
-    justify-content: space-evenly;
-    margin-top: 50px;
-    display: flex;
-    gap: 20px; /* Espacement entre chaque groupe (image + bouton) */
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Aligne les images et boutons verticalement */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

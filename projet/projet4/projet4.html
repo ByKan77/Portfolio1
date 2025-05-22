@@ -1,48 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Facturation </title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projet Facturation</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-            <h1>Projet Facturation</h1> <!-- Titre centré -->
-        </header>
-        <main>
-            <section class="game-info">
-                <h2>À propos du projet</h2>
-                <p>Facturation Freelance, est un projet permettant de fabriquer une facture, en indiquant le client, le prix et la date.</br>
-                Par la suite, la facture peut se télécharger en PDF pour permettre de l'utiliser.</p>
-            </section>
-            <section class="rea">
-                <h2 class="title_h">Présentation des choses réalisées</h2>
-                <div id="gestionAdmin">
-                    <p>Nous pouvons voir sur la première image, comment implémenter un client et éditer une facture.</p>
-                    <p class="title_d">Réalisation de l'espace</p>
-                    <div class="image-container">
-                        <img src="image_factu/aff_facture.png" alt="Factu1">
-                        <img src="image_factu/edit-ajoutFactu.png" alt="Factu2">
-                    </div>
-                    <p class="title_d">Affichage client et facture</p>
-                    <p>Nous pouvons voir que l'affichage les factures en format PDF, et que l'on peut aussi voir l'affichage client.</p>
-                    <div class="image-container">
-                        <img src="image_factu/affi_client.png" alt="Factu3">
-                        <img src="image_factu/FacturePDF.png" alt="Factu4">
-                    </div>
-                </div>
-            </section>
-            <div class="button-container2">
-                <div class="button-with-image">
-                    <button id="tyfali">Télécharger la documentation</button>
-                    <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('image_factu/documentation_freelance.pdf')"></a>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script src="script.js"></script>
+  <div class="container">
+    <header>
+      <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+      <h1>Projet Facturation</h1>
+    </header>
+
+    <main>
+      <section class="game-info visible">
+        <h2>À propos du projet</h2>
+        <p>
+          Facturation Freelance est un projet permettant de générer une facture
+          en renseignant le client, le prix et la date.<br /><br />
+          Une fois les informations saisies, la facture peut être téléchargée
+          au format PDF.
+        </p>
+      </section>
+
+      <section class="rea visible">
+        <h2 class="title_h">Présentation des choses réalisées</h2>
+
+        <div id="gestionAdmin">
+          <p>Nous pouvons voir sur la première image comment implémenter un client et éditer une facture.</p>
+          <p class="title_d">Réalisation de l'espace</p>
+          <div class="image-container">
+            <img src="image_factu/aff_facture.png" alt="Factu1" />
+            <img src="image_factu/edit-ajoutFactu.png" alt="Factu2" />
+          </div>
+
+          <p class="title_d">Affichage client et facture</p>
+          <p>Nous pouvons voir l'affichage des factures au format PDF ainsi que l'affichage client.</p>
+          <div class="image-container">
+            <img src="image_factu/affi_client.png" alt="Factu3" />
+            <img src="image_factu/FacturePDF.png" alt="Factu4" />
+          </div>
+        </div>
+      </section>
+
+      <section class="button-container2 visible">
+        <div class="button-with-image">
+          <button id="tyfali">Télécharger la documentation</button>
+          <a href="#">
+            <img src="../../icon_picture/eye.png" alt="Voir la documentation" onclick="openPDF('image_factu/documentation_freelance.pdf')" />
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function openPDF(url) {
+      window.open(url, "_blank");
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll("section").forEach(section => {
+        section.classList.add("visible");
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,114 +1,94 @@
+:root {
+    --background: #0D1B2A;
+    --background-element: #1B263B;
+    --background-solid: #1E2A3C;
+    --hovered-element: rgba(97, 153, 255, 0.15);
+    --hover-color: #6199FF;
+    --text-color: #ffffff;
+    --high-contrast-text: #ffffff;
+    --accent-color: #4DA3FF;
+    --font-family: "San Francisco", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0b3d91; /* Bleu foncé */
-    color: white;
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--text-color);
 }
 
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-}
-
-header .back-arrow {
-    position: absolute;      /* Positionnement absolu */
-    left: -50px;              /* Décalage de la flèche vers la gauche */
-    font-size: 50px;         /* Taille de la flèche */
-    text-decoration: none;   /* Enlever le soulignement du lien */
-    color: inherit;          /* Garder la couleur du texte */
-
-}
-
-/* Titre centré */
-header h1 {
-    margin: 0;               /* Enlever les marges par défaut */
-    font-size: 24px;         /* Ajuste la taille du titre si nécessaire */
-    text-align: center;      /* Centrer le texte */
+    background-color: var(--background-element);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 header {
     display: flex;
-    justify-content: center;  /* Centrer le titre */
-    align-items: center;      /* Aligner verticalement */
-    position: relative;       /* Pour positionner la flèche de manière absolue */
-    height: 60px;             /* Ajuste la hauteur du header si nécessaire */
-    color: white;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60px;
+    background-color: var(--background-solid);
+    color: var(--text-color);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: var(--accent-color);
+}
+
+header .back-arrow {
+    position: absolute;
+    left: 20px;
+    font-size: 32px;
+    text-decoration: none;
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
+
+header .back-arrow:hover {
+    color: var(--hover-color);
+}
+
+main {
+    margin: 20px 0;
+}
+
+section {
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
     text-align: center;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-main {
-    margin: 20px 0;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
 p {
     font-size: 1.2em;
     line-height: 1.6;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    font-size: 1.2em;
-    margin: 5px 0;
-}
-
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0b3d91; /* Bleu foncé */
-    color: white;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-
-
-h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-main {
-    margin: 20px 0;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    text-align: center;
 }
 
 ul {
@@ -127,22 +107,22 @@ li {
 }
 
 button {
-    background-color: #1e90ff;
+    background-color: var(--accent-color);
     border: none;
-    color: white;
+    color: var(--high-contrast-text);
     padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 1.2em;
-    margin: 4px 2px;
-    cursor: pointer;
     border-radius: 12px;
-    transition: background-color 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 button:hover {
-    background-color: #1c86ee;
+    background-color: var(--hovered-element);
+    color: var(--accent-color);
+    transform: translateY(-2px);
 }
 
 footer {
@@ -154,63 +134,72 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9em;
+    color: var(--text-color);
 }
+
 .image-container {
-    display: flex; /* Dispose les images en ligne */
-    justify-content: space-around; /* Espace égal autour des images */
-    gap: 15px; /* Espacement horizontal entre les images */
-    margin: 15px 0; /* Espacement vertical autour des conteneurs d'images */
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 15px 0;
 }
 
 .image-container img {
-    width: 45%; /* Les images occupent chacune 45% de la largeur */
-    height: auto; /* Conserve le ratio d'aspect des images */
-    border: 1px solid #ccc; /* Optionnel : Bordure légère */
-    border-radius: 8px; /* Coins arrondis */
+    width: 45%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
 }
 
 .title_d {
     text-align: center;
     padding-top: 15px;
-    margin-bottom: 10px; /* Ajout pour espacer le texte des images */
+    margin-bottom: 10px;
 }
 
 .title_h {
     text-align: center;
-    margin-bottom: 20px; /* Ajout pour espacer le titre du contenu suivant */
+    margin-bottom: 20px;
 }
 
 #img_c {
-    max-width: 50%; /* Limite la largeur des images */
-    height: auto; /* Conserve le ratio d'aspect */
-    border-radius: 5px; /* Optionnel : Ajoute des coins arrondis */
-    margin: 0 auto; /* Centre l'image */
-    display: block; /* Nécessaire pour que le margin auto fonctionne */
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
     padding-top: 15px;
 }
 
-
 .button-with-image {
     display: flex;
-    align-items: center; /* Aligne l'image et le bouton verticalement */
-    gap: 10px; /* Espacement entre l'image et le bouton */
+    align-items: center;
+    gap: 10px;
 }
+
 .button-with-image img {
-    width: 30px; /* Largeur de l'image */
-    height: 30px; /* Hauteur de l'image */
-    object-fit: contain; /* Maintient les proportions de l'image */
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
 }
 
 .button-container2 {
     justify-content: space-evenly;
     margin-top: 50px;
     display: flex;
-    gap: 20px; /* Espacement entre chaque groupe (image + bouton) */
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: center; /* Aligne les images et boutons verticalement */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
-#a_site{
-    color: white;
+
+#a_site {
+    color: var(--accent-color);
     text-decoration: none;
     text-align: center;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#a_site:hover {
+    color: var(--hover-color);
 }

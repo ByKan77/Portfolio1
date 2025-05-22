@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baie-Inventaire</title>
+    <title>Inventaire Baie</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <a href="javascript:history.back();" class="back-arrow">&#8592;</a> <!-- Flèche à gauche -->
-        <h1>Présentation de l'inventaire de la Baie Informatique IPSSI</h1> <!-- Titre centré -->
-    </header>
-    <main>
-        <section id="introduction">
-            <h2>Introduction</h2>
-            <p>Une baie informatique est un espace conçu pour héberger et protéger des équipements informatiques sensibles</p>
-        </section>
-        <section id="fonctionnement">
-            <h2>Qu'est-ce une baie Informatique ?</h2>
-            <p> Elle accueille des serveurs, des commutateurs réseau, des dispositifs de stockage, des routeurs et d'autres équipements essentiels pour le bon fonctionnement du système informatique de l'entreprise.</br>
-            Donc effectuer son inventaire, pour pouvoir faire un état de sa baie est indispensable</p>
-        </section>
-        <section id="avantages">
-            <h2 id="baie">Inventaire Baie Informatique</h2>
-            <img src="../../document/Inventaire-1.png" id="inventaire-image">
-        </section>
-        
-        <div class="button-container2">
-            <div class="button-with-image">
-                <button id="inv">Télécharger la documentation de Gantt</button>
-                <a href="#"><img src="../../icon_picture/eye.png" alt="Synthesis Icon" onclick="openPDF('../../document/dinventaire.pdf')"></a>
+    <div class="container">
+        <header>
+            <a href="javascript:history.back();" class="back-arrow">&#8592;</a>
+            <h1>Inventaire de la Baie Informatique IPSSI</h1>
+        </header>
+        <main>
+            <section id="introduction" class="visible">
+                <h2>Introduction</h2>
+                <p>Une baie informatique est un espace conçu pour héberger et protéger des équipements informatiques sensibles.</p>
+            </section>
+
+            <section id="fonctionnement" class="visible">
+                <h2>Qu'est-ce qu'une baie informatique ?</h2>
+                <p>Elle accueille des serveurs, des commutateurs réseau, des dispositifs de stockage, des routeurs, etc.</br>
+                Effectuer un inventaire permet d’en assurer un suivi précis et une maintenance efficace.</p>
+            </section>
+
+            <section id="avantages" class="visible">
+                <h2>Inventaire réalisé</h2>
+                <img src="../../document/Inventaire-1.png" id="inventaire-image" alt="Capture Inventaire">
+            </section>
+
+            <div class="button-container2">
+                <div class="button-with-image">
+                    <button id="inv">Télécharger la documentation</button>
+                    <a href="#"><img src="../../icon_picture/eye.png" alt="Voir PDF" onclick="openPDF('../../document/dinventaire.pdf')"></a>
+                </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Présentation Inventaire de la Baie</p>
-    </footer>
+        </main>
+        <footer>
+            <p>&copy; 2024 - Inventaire de la baie IPSSI</p>
+        </footer>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
